@@ -14,7 +14,7 @@
 
             function makeCivBar()
             {
-              d3.json("/jsonFiles/civillian_industry_bar.json", function(data)
+              d3.json("jsonFiles/civillian_industry_bar.json", function(data)
               {
 
                 myEntireData = data;
@@ -39,7 +39,7 @@
 
             function makeConBar()
             {
-              d3.json("/jsonFiles/consulting_industry_bar.json", function(data)
+              d3.json("jsonFiles/consulting_industry_bar.json", function(data)
               {
 
                 myEntireData = data;
