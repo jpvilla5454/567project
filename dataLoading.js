@@ -40,7 +40,7 @@ var categoryToColorBy = industryTag; //variable to hold what category the user w
 
 var currCategoryTag; //variable to hold whichever flag is chosen
 
- var preFolderString = "";
+ //var preFolderString = "";
 
 //called immediatley after data loading
 function firstCall()
@@ -121,7 +121,7 @@ function loadUSNavy()
   removeTreeMap();
   if(document.getElementById("CiviliansBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(navyTag, civilianTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(navyTag, civilianTag, categoryToColorBy, academyFlag), function(data)
     {
       //console.log(makeFileName(navyTag, civilianTag, industryTag, academyFlag));
       myData = data
@@ -131,7 +131,7 @@ function loadUSNavy()
   }
   else if(document.getElementById("ConsultantsBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(navyTag, consultingTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(navyTag, consultingTag, categoryToColorBy, academyFlag), function(data)
     {
       myData = data
       //console.log(myData);
@@ -148,7 +148,7 @@ function loadUSAirForce()
   removeTreeMap();
   if(document.getElementById("CiviliansBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(airForceTag, civilianTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(airForceTag, civilianTag, categoryToColorBy, academyFlag), function(data)
     {
       myData = data
       //console.log(myData);
@@ -157,7 +157,7 @@ function loadUSAirForce()
   }
   else if(document.getElementById("ConsultantsBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(airForceTag, consultingTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(airForceTag, consultingTag, categoryToColorBy, academyFlag), function(data)
     {
       myData = data
       //console.log(myData);
@@ -175,7 +175,7 @@ function loadUSArmy()
   removeTreeMap();
   if(document.getElementById("CiviliansBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(militaryTag, civilianTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(militaryTag, civilianTag, categoryToColorBy, academyFlag), function(data)
     {
       myData = data
       //console.log(myData);
@@ -184,7 +184,7 @@ function loadUSArmy()
   }
   else if(document.getElementById("ConsultantsBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(armyTag, consultingTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(armyTag, consultingTag, categoryToColorBy, academyFlag), function(data)
     {
       myData = data
       //console.log(myData);
@@ -201,7 +201,7 @@ function loadUSCoastGuard()
   removeTreeMap();
   if(document.getElementById("CiviliansBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(coastGuardTag, civilianTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(coastGuardTag, civilianTag, categoryToColorBy, academyFlag), function(data)
     {
       myData = data
       //console.log(myData);
@@ -210,7 +210,7 @@ function loadUSCoastGuard()
   }
   else if(document.getElementById("ConsultantsBtn").checked == true)
   {
-    d3.json(preFolderString + "jsonFiles/" + makeFileName(coastGuardTag, consultingTag, categoryToColorBy, academyFlag), function(data)
+    d3.json("jsonFiles/" + makeFileName(coastGuardTag, consultingTag, categoryToColorBy, academyFlag), function(data)
     {
       myData = data
       //console.log(myData);
@@ -257,7 +257,7 @@ function loadNoData()
 {
   //for some reason this doesnt work all the time. but we shouldnt ever need to use it
   removeTreeMap()
-  d3.json(preFolderString + "jsonFiles/noData.json", function(data)
+  d3.json("jsonFiles/noData.json", function(data)
   {
     myData = data
     //console.log(myData);
